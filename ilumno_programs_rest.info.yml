@@ -1,0 +1,8 @@
+name: 'Ilumno Programs Rest'
+type: module
+description: 'This module exposes a REST to be able to modify the information of programs'
+core: 8.x
+package: 'Ilumno'
+dependencies:
+  - restui
+  - ilumno_programs

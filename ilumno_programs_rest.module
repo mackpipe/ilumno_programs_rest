@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains ilumno_programs_rest.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ilumno_programs_rest_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ilumno_programs_rest module.
+    case 'help.page.ilumno_programs_rest':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module exposes a REST to be able to modify the information of programs') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ilumno_programs_rest_theme() {
+  return [
+    'ilumno_programs_rest' => [
+      'render element' => 'children',
+    ],
+  ];
+}
